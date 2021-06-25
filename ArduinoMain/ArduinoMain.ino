@@ -1,16 +1,21 @@
 byte x;
 int j = 0;
 int state=0;
+int sensorValue=0;
+int sensorPin = A0;
 
 
 void setup() {
  Serial.begin(115200);
- pinMode(10, OUTPUT);
+ pinMode(10, 'OUTPUT');
  delay(100);
+ //digitalWrite(10, HIGH);
+ //digitalWrite(10, LOW);
 }
 
 void loop() 
 {
+  sensorValue = analogRead(sensorPin);
   if(Serial.available()>0)
   {
     //Serial.print("I am reading this: ");
@@ -18,9 +23,7 @@ void loop()
     //Serial.println(j);
     Execute(j);
     //Serial.flush();
-  }
-
-  delay(100);  
+  } 
 }
 
 void Execute(int t) {
@@ -39,6 +42,10 @@ void Execute(int t) {
     case 3:
       Serial.print("Last State: ");
       Serial.println(state);
+      break;
+    case 4:
+      Serial.print("Resistance: ");
+      Serial.println(sensorValue);
       break;
     default:
       state=0;
