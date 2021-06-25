@@ -2,10 +2,7 @@
 obj=ArduinoObj(25);
 
 OpenConnection(obj);
-%%
-LightUp(obj);
-%%
-GoDark(obj);
+
 %%
 samplearr=[200,200,200,200,200];
 mT=table;
