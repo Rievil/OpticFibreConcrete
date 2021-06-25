@@ -52,3 +52,5 @@ plot(timeArr,newy,'-r','LineWidth',1.5);
 save('PhotorezistorMeasurement.mat','T');
 %%
 load('PhotorezistorMeasurement.mat');
+%%
+tst = arduino
