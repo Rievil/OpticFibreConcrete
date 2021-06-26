@@ -7,7 +7,7 @@ LightUp(obj);
 %%
 GoDark(obj);
 %%
-samplearr=[200,200,200,200,200];
+samplearr=[1000];
 mT=table;
 LightUp(obj);
 pause(5);
@@ -47,7 +47,7 @@ for i=1:size(mT,1)
     newy=fitobj(x);
     plot(x,newy,'-','LineWidth',1.5,'Color',color(i,:),'DisplayName',sprintf('Měření: %d',i));
 end
-ylim([150,250]);
+ylim([0,1024]);
 legend;
 %%
 
